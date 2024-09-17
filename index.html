@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead Value Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lead Value Calculator</h1>
+    <div class="calculator">
+        <div class="inputs">
+            <h2>Inputs</h2>
+            <label for="ticketPrice">Ticket Price of Service:</label>
+            <input type="number" id="ticketPrice" step="0.01" min="0">
+
+            <label for="monthlyLeads">Number of Leads Monthly:</label>
+            <input type="number" id="monthlyLeads" min="0">
+
+            <label for="profitMargin">Profit Margin (%):</label>
+            <input type="number" id="profitMargin" step="0.01" min="0" max="100">
+
+            <label for="closeRate">Close Rate (%):</label>
+            <input type="number" id="closeRate" step="0.01" min="0" max="100">
+
+            <button id="calculateBtn">Calculate</button>
+        </div>
+
+        <div class="outputs">
+            <h2>Outputs</h2>
+            <p>Total New Customers: <span id="totalCustomers"></span></p>
+            <p>Total Monthly Revenue: $<span id="totalRevenue"></span></p>
+            <p>Profit After Expenses: $<span id="profitAfterExpenses"></span></p>
+            <p>Actual Lead Value: $<span id="actualLeadValue"></span></p>
+            <p>Net Margin Value of Lead: $<span id="netMarginValueOfLead"></span></p>
+            <p>Total Monthly Profit: $<span id="totalMonthlyProfit"></span></p>
+        </div>
+
+        <div class="scenarios">
+            <h2>Scenarios</h2>
+
+            <div class="scenario-section">
+                <h3>What Should You Charge Per Lead</h3>
+                <p>Low: $<span id="chargePerLeadLow"></span></p>
+                <p>Moderate: $<span id="chargePerLeadModerate"></span></p>
+                <p>High: $<span id="chargePerLeadHigh"></span></p>
+            </div>
+
+            <div class="scenario-section">
+                <h3>Monthly Profit for Business Owner</h3>
+                <p>Low: $<span id="monthlyProfitLow"></span></p>
+                <p>Moderate: $<span id="monthlyProfitModerate"></span></p>
+                <p>High: $<span id="monthlyProfitHigh"></span></p>
+            </div>
+
+            <div class="scenario-section">
+                <h3>Monthly Bill to Client</h3>
+                <p>Low: $<span id="monthlyBillLow"></span></p>
+                <p>Moderate: $<span id="monthlyBillModerate"></span></p>
+                <p>High: $<span id="monthlyBillHigh"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
